@@ -1,64 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Employee Input Form</title>
-        <link rel="stylesheet" href="main.css"> 
-    </head>
-    <body>
-        <div id="submit-modal" class="modal">
-            <div class="modal-content">
-                <span id="close-btn" class="close">&times;</span>
-                <p>First Name: <span id="firstname"></span></p>
-                <p>Last Name: <span id="lastname"></span></p>
-                <p>Gender: <span id="gender"></span></p>
-                <p>Marital Status: <span id="marital"></span></p>
-                <p>Spouse Name : <span id="spousename"></span></p>
-                <p>Other : <span id="otherdetails"></span></p>
-            </div>
+
+<head>
+    <title>Employee Input Form</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="submit-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-btn" class="close">&times;</span>
+            <p>First Name: <span id="firstname"></span></p>
+            <p>Last Name: <span id="lastname"></span></p>
+            <p>Gender: <span id="gender"></span></p>
+            <p>Marital Status: <span id="marital"></span></p>
+            <p>Spouse Name : <span id="spousename"></span></p>
+            <p>Other : <span id="otherdetails"></span></p>
         </div>
+    </div>
 
-        <div class="center">
-        <form id = "emp-form">
-            <table>
-                <tr>
-                    <td><label for="fname">First name</label></td>
-                    <td><input type="text" id="fname" name="fname" autofocus required></td>
-                </tr>
-                <tr>
-                    <td><label for="lname">Last name</label></td>
-                    <td><input type="text" id="lname" name="lname" required><br></td>
-                </tr>
-                <tr>
-                    <td>Gender</td>
-                    <td><input type="radio" id="male" name="gender" value="male" required> <label for="male">Male</label> 
-                    <input type="radio" id="female" name="gender" value="female" required> <label for="female"> Female</label><br></td>
-                </tr>
-                <tr>
-                    <td>Marital Status</td>
-                    <td><input type="radio" id="married" name="marital" value="married" required> <label for="married">Married</label> 
-                    <input type="radio" id="unmarried" name="marital" value="unmarried" required> <label for="unmarried">Unmarried</label> <br></td>
-                </tr>
-                <tr>
-                    <td><label for="spouse">Spouse Name</label></td>
-                    <td><input type="text" id="spouse" name="spouse" disabled=true required=false ><br></td>
-                </tr>
-                <tr>
-                    <td><label for="other">Other Details</label></td>
-                    <td><input type="text" id="other" name="other" required><br></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="checkbox" id="tnc" name="tnc" value="tnc">
-                        <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label><br></td>
-                </tr>
-
-                <tr class="btn-row">
-                    <td><button id='reset-btn'>RESET</button></td>
-                    <td><button id='save-btn'>SAVE</button></td>
-                </tr>
-            </table>
+    <div class="center">
+        <form id="emp-form">
+            <p> <label for="fname">First name</label>
+               <span><input class="textbox" type="text" id="fname" name="fname" autofocus required></span> 
+            </p>
+            <p><label for="lname">Last name</label>
+                <span><input class="textbox" type="text" id="lname" name="lname" required><br></span>
+            </p>
+            <p>Gender
+                <span><input type="radio" id="male" name="gender" value="male" required> <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required> <label for="female">
+                    Female</label><br></span>
+            </p>
+            <p>Marital Status
+                <span><input type="radio" id="married" name="marital" value="married" required> <label
+                    for="married">Married</label>
+                <input type="radio" id="unmarried" name="marital" value="unmarried" required> <label
+                    for="unmarried">Unmarried</label> <br></span>
+            </p>
+            <p> <label for="spouse">Spouse Name</label>
+                <span>
+                <input class="textbox" type="text" id="spouse" name="spouse" disabled=true required=false><br></span>
+            </p>
+            <p> <label for="other">Other Details</label>
+                <span>
+                <input class="textbox" type="text" id="other" name="other" required><br></span> 
+            </p>
+            <p> <input type="checkbox" id="tnc" name="tnc" value="tnc">
+                <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label><br>
+            </p>
+            <p> <button id='reset-btn'>RESET</button>
+                <button id='save-btn'>SAVE</button>
+            </p>
         </form>
-
-        </div>
-        <script src="index.js"></script>  
-    </body>
+    </div>
+    <script src="index.js"></script>
+</body>
 </html>
