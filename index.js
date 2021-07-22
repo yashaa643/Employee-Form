@@ -51,7 +51,7 @@ const displayModal = function () {
 
 const validateForm = function () {
     let fname = document.forms["emp-form"]["fname"].value;
-    let lname = document.forms["emp-form"]["fname"].value;
+    let lname = document.forms["emp-form"]["lname"].value;
     let spouse = document.forms["emp-form"]["spouse"].value;
     let other = document.forms["emp-form"]["other"].value;
     let tnc = document.forms["emp-form"]["tnc"].checked;
