@@ -44,6 +44,8 @@ const displayModal = function () {
     document.getElementById("marital").innerHTML = empDetails.marital;
     if (marriedElement.checked === true)
         document.getElementById("spousename").innerHTML = empDetails.spouse;
+    else
+    document.getElementById("spousename").innerHTML = "NA";
     document.getElementById("otherdetails").innerHTML = empDetails.other;
     modal.style.display = 'block';
     clickEvent('close-btn', closeModal);
