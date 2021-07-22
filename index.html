@@ -20,7 +20,7 @@
     </div>
 
     <div class="center">
-        <form id="emp-form">
+        <form id="emp-form" onsubmit="saveEvent">
             <p> <label for="fname">First name</label>
                <span><input class="textbox" type="text" id="fname" name="fname" autofocus required></span> 
             </p>
@@ -49,8 +49,8 @@
             <p> <input type="checkbox" id="tnc" name="tnc" value="tnc">
                 <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label><br>
             </p>
-            <p> <button id='reset-btn'>RESET</button>
-                <button id='save-btn'>SAVE</button>
+            <p> <button id='save-btn'>SAVE</button>
+                <button id='reset-btn'>RESET</button>
             </p>
         </form>
     </div>
