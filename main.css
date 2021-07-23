@@ -21,6 +21,8 @@ html{
   border: 1px solid #000;
   border-bottom: none;
   border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   font-variant: small-caps;
   font-size: large;
 }
@@ -29,10 +31,23 @@ html{
   border: 1px solid #000;
   border-radius: 3px;
   background-color: whitesmoke;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   width: 50%;
   margin: auto;
   text-align: start;
   padding: 10px 20px;
+}
+
+.modalhead{
+  padding: 10px 20px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background: #110933;
+  border: 1px solid #000;
+  font-size: larger;
 }
 
 .modal {
@@ -57,15 +72,31 @@ html{
   width: 30%;
 }
 
-.close {
+.modal p {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  text-align: justify;
+  left: 20%;
+  font-weight: bold;
+}
+
+.modal p span{
+  position: absolute;
+  left: 36%;
+  font-weight: normal;
+}
+
+
+#close-btn {
   color: #aaaaaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
 
-.close:hover, .close:focus {
-  color: #000;
+#close-btn:hover, #close-btn:focus {
   text-decoration: none;
   cursor: pointer;
 }

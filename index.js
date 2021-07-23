@@ -37,8 +37,8 @@ const displayModal = function () {
 
     document.getElementById("firstname").innerHTML = empDetails.fname;
     document.getElementById("lastname").innerHTML = empDetails.lname;
-    document.getElementById("gender").innerHTML = empDetails.gender;
-    document.getElementById("marital").innerHTML = empDetails.marital;
+    document.getElementById("gender").innerHTML = (empDetails.gender === "male" ? "Male" : "Female");
+    document.getElementById("marital").innerHTML = (empDetails.marital === "married" ? "Married" : "Unmarried");
     if (maritalElement.value === "married")
         document.getElementById("spousename").innerHTML = empDetails.spouse;
     else
@@ -79,7 +79,7 @@ const validateForm = function () {
         return false;
     }
 
-    if (spouse === "" && marriedElement.checked === true) {
+    if (spouse === "" && maritalElement.value === "married") {
         alert("Please enter a Spouse name");
         return false;
     }
