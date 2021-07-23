@@ -14,7 +14,6 @@ const hasWhiteSpace = function (string) {
 }
 
 const setSpouseStatus = function () {
-    console.log(maritalElement);
     if(maritalElement.value==="married"){
         spouseElement.disabled = false;
     }
@@ -24,7 +23,6 @@ const setSpouseStatus = function () {
 }
 
 const resetForm = function () {
-    console.log("resetting");
     document.getElementById('emp-form').reset();
 }
 

@@ -17,47 +17,45 @@
             <p>Marital Status: <span id="marital"></span></p>
             <p>Spouse Name : <span id="spousename"></span></p>
             <p>Other : <span id="otherdetails"></span></p>
-            </div>
         </div>
     </div>
 
     <div class="center">
-            <div class="head"> Employee Details Form </div>
-       
-             <form id="emp-form" onsubmit="saveEvent">
-                
-                <label for="fname">First name</label>
-                <input type="text" id="fname" name="fname" placeholder="John" autofocus required>
+        <div class="head"> Employee Details Form </div>
 
-                <label for="lname">Last name</label>
-                <input  type="text" id="lname" name="lname" placeholder="Doe" required>
+        <form id="emp-form" onsubmit="saveEvent">
 
-                <label for="gender">Gender</label>
-                <select id="gender" name="gender" required>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" placeholder="John" autofocus required>
 
-                <label for="marital">Marital Status</label>
-                <select id="maritalSelect" name="marital" onchange="setSpouseStatus()" required>
-                    <option value="married">Married</option>
-                    <option value="unmarried">Unmarried</option>
-                </select>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required>
 
-                <label for="spouse">Spouse Name</label>
-                <input type="text" id="spouse" name="spouse" placeholder="Jane" required=false>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
 
-                <label for="other">Other Details</label>
-                <input class="textbox" type="text" id="other" name="other" required placeholder="Guitarist">
+            <label for="marital">Marital Status</label>
+            <select id="maritalSelect" name="marital" onchange="setSpouseStatus()" required>
+                <option value="married">Married</option>
+                <option value="unmarried">Unmarried</option>
+            </select>
 
-                <input type="checkbox" id="tnc" name="tnc" value="tnc">
-                <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label>
+            <label for="spouse">Spouse Name</label>
+            <input type="text" id="spouse" name="spouse" placeholder="Jane" required=false>
 
-            <div class="buttonrow" > <button id='save-btn'>SAVE</button>
-                <button id='reset-btn'>RESET</button>
-            </div>
-        </form>
+            <label for="other">Other Details</label>
+            <input class="textbox" type="text" id="other" name="other" required placeholder="Guitarist">
+
+            <input type="checkbox" id="tnc" name="tnc" value="tnc">
+            <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label>
+
+            <button id='save-btn'>SAVE</button>
+            <button id='reset-btn'>RESET</button>
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>
