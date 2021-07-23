@@ -28,11 +28,11 @@ html{
 .center form {
   border: 1px solid #000;
   border-radius: 3px;
+  background-color: whitesmoke;
   width: 50%;
   margin: auto;
   text-align: start;
   padding: 10px 20px;
-  font-weight: bold;
 }
 
 .modal {
