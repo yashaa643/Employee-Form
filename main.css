@@ -2,12 +2,26 @@ html{
   height: 100%;
   background-image: linear-gradient(to bottom right, cyan, rgba(0, 255, 255, 0));
 }
+
 .center {
   width: 50%;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   text-align: center;
   align-items: center;
+}
+
+.head{
+  width: 50%;
+  margin: auto;
+  padding: 10px 20px;
+  text-align: center;
+  background: orange;
+  border: 1px solid #000;
+  border-bottom: none;
+  border-radius: 3px;
+  font-variant: small-caps;
+  font-size: large;
 }
 
 .center form {
@@ -19,16 +33,6 @@ html{
   padding: 10px 20px;
   background: linear-gradient(to bottom right, #fffc00, #ffffff);
   font-weight: bold;
-}
-
-.center form p{
-  height: 30px;
-  vertical-align: middle;
-}
-
-.center form span{
-  position:absolute;
-  left: 44%;
 }
 
 .modal {
