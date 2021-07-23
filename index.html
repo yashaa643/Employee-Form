@@ -21,34 +21,34 @@
 
     <div class="center">
         <form id="emp-form" onsubmit="saveEvent">
-            <p> <label for="fname">First name</label>
-               <span><input class="textbox" type="text" id="fname" name="fname" placeholder="John" autofocus required></span> 
-            </p>
-            <p><label for="lname">Last name</label>
-                <span><input class="textbox" type="text" id="lname" name="lname" placeholder="Doe" required><br></span>
-            </p>
-            <p>Gender
-                <span><input type="radio" id="male" name="gender" value="male" checked required> <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female" required> <label for="female">
-                    Female</label><br></span>
-            </p>
-            <p>Marital Status
-                <span><input type="radio" id="married" name="marital" value="married" checked required> <label
-                    for="married">Married</label>
-                <input type="radio" id="unmarried" name="marital" value="unmarried" required> <label
-                    for="unmarried">Unmarried</label> <br></span>
-            </p>
-            <p> <label for="spouse">Spouse Name</label>
-                <span>
-                <input class="textbox" type="text" id="spouse" name="spouse" placeholder="Jane" required=false><br></span>
-            </p>
-            <p> <label for="other">Other Details</label>
-                <span>
-                <input class="textbox" type="text" id="other" name="other" required placeholder="Guitarist"><br></span> 
-            </p>
-            <p> <input type="checkbox" id="tnc" name="tnc" value="tnc">
-                <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label><br>
-            </p>
+                
+                <label for="fname">First name</label>
+                <input type="text" id="fname" name="fname" placeholder="John" autofocus required>
+
+                <label for="lname">Last name</label>
+                <input  type="text" id="lname" name="lname" placeholder="Doe" required>
+
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="marital">Marital Status</label>
+                <select id="maritalSelect" name="marital" onchange="setSpouseStatus()" required>
+                    <option value="married">Married</option>
+                    <option value="unmarried">Unmarried</option>
+                </select>
+
+                <label for="spouse">Spouse Name</label>
+                <input type="text" id="spouse" name="spouse" placeholder="Jane" required=false>
+
+                <label for="other">Other Details</label>
+                <input class="textbox" type="text" id="other" name="other" required placeholder="Guitarist">
+
+                <input type="checkbox" id="tnc" name="tnc" value="tnc">
+                <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label>
+
             <div class="buttonrow" > <button id='save-btn'>SAVE</button>
                 <button id='reset-btn'>RESET</button>
             </div>

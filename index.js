@@ -1,5 +1,4 @@
-let marriedElement = document.querySelector('#married');
-let unmarriedElement = document.querySelector('#unmarried');
+let maritalElement = document.querySelector('#maritalSelect')
 let spouseElement = document.querySelector('#spouse');
 let otherElement = document.querySelector('#other')
 let modal = document.getElementById("submit-modal");
@@ -15,14 +14,12 @@ const hasWhiteSpace = function (string) {
 }
 
 const setSpouseStatus = function () {
-
-    if (marriedElement.checked === true) {
+    console.log(maritalElement);
+    if(maritalElement.value==="married"){
         spouseElement.disabled = false;
-        spouseElement.required = true;
     }
-    if (unmarriedElement.checked === true) {
+    else{
         spouseElement.disabled = true;
-        spouseElement.required = false;
     }
 }
 
@@ -42,7 +39,7 @@ const displayModal = function () {
     document.getElementById("lastname").innerHTML = empDetails.lname;
     document.getElementById("gender").innerHTML = empDetails.gender;
     document.getElementById("marital").innerHTML = empDetails.marital;
-    if (marriedElement.checked === true)
+    if (maritalElement.value === "married")
         document.getElementById("spousename").innerHTML = empDetails.spouse;
     else
     document.getElementById("spousename").innerHTML = "NA";
@@ -120,11 +117,6 @@ const saveEvent = function (event) {
     }
 }
 
-const spouseStatusListener = function () {
-    clickEvent('married', setSpouseStatus);
-    clickEvent('unmarried', setSpouseStatus);
-}
-
 const resetFormListener = function () {
     clickEvent('reset-btn', resetForm);
 }
@@ -133,6 +125,5 @@ const saveEventListener = function () {
     clickEvent('save-btn', saveEvent);
 }
 
-spouseStatusListener();
 resetFormListener();
 saveEventListener();
