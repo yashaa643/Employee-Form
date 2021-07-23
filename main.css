@@ -1,6 +1,6 @@
 html{
   height: 100%;
-  background-image: linear-gradient(to bottom right, cyan, rgba(0, 255, 255, 0));
+  background-image: linear-gradient(to bottom right, #EDF6CC, rgba(0, 255, 255, 0));
 }
 
 .center {
@@ -16,7 +16,8 @@ html{
   margin: auto;
   padding: 10px 20px;
   text-align: center;
-  background: orange;
+  color: white;
+  background: #110933;
   border: 1px solid #000;
   border-bottom: none;
   border-radius: 3px;
@@ -31,7 +32,6 @@ html{
   margin: auto;
   text-align: start;
   padding: 10px 20px;
-  background: linear-gradient(to bottom right, #fffc00, #ffffff);
   font-weight: bold;
 }
 
@@ -82,7 +82,7 @@ input[type=text], select {
 
 #save-btn{
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #B1D62E;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -92,12 +92,12 @@ input[type=text], select {
 }
 
 #save-btn:hover {
-  background-color: #45a049;
+  background-color: #85a021;
 }
 
 #reset-btn{
   width: 100%;
-  background-color: rgb(249, 35, 35);
+  background-color: #FC5A03;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -107,6 +107,6 @@ input[type=text], select {
 }
 
 #reset-btn:hover {
-  background-color: rgb(213, 32, 32);
+  background-color: #bb4404;
 }
 
