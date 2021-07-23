@@ -1,9 +1,28 @@
-html{
+html {
   height: 100%;
   background-image: linear-gradient(to bottom right, #EDF6CC, rgba(0, 255, 255, 0));
 }
 
-.center {
+table,th,tr,td{
+  padding: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 6px;
+}
+
+label{
+  font-family: 'Oswald' , sans-serif;
+}
+input , option , select ,table{
+  font-family: 'Lora' , serif;
+}
+
+.center{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.centerElement{
   width: 50%;
   margin: auto;
   margin-top: 5%;
@@ -11,23 +30,25 @@ html{
   align-items: center;
 }
 
-.head{
+.head {
   width: 50%;
   margin: auto;
   padding: 10px 20px;
   text-align: center;
   color: white;
+  letter-spacing: 0.2rem;
   background: #110933;
   border: 1px solid #000;
   border-bottom: none;
   border-radius: 3px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  font-family: 'Oswald' , sans-serif;
   font-variant: small-caps;
   font-size: large;
 }
 
-.center form {
+.centerElement form {
   border: 1px solid #000;
   border-radius: 3px;
   background-color: whitesmoke;
@@ -37,17 +58,6 @@ html{
   margin: auto;
   text-align: start;
   padding: 10px 20px;
-}
-
-.modalhead{
-  padding: 10px 20px;
-  width: 90%;
-  margin: auto;
-  text-align: center;
-  color: white;
-  background: #110933;
-  border: 1px solid #000;
-  font-size: larger;
 }
 
 .modal {
@@ -67,39 +77,19 @@ html{
 .modal-content {
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 30%;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: fit-content;
 }
 
-.modal p {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  padding: 10px;
-  text-align: justify;
-  left: 20%;
-  font-weight: bold;
-}
-
-.modal p span{
-  position: absolute;
-  left: 36%;
-  font-weight: normal;
+.modalhead{
+  color: white;
+  padding: 5px;
+  text-align: center;
+  background-color: #110933;
 }
 
 
-#close-btn {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-#close-btn:hover, #close-btn:focus {
-  text-decoration: none;
-  cursor: pointer;
-}
 
 input[type=text], select {
   width: 100%;
@@ -111,7 +101,8 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
-#save-btn{
+.button{
+  font-family: 'Oswald' , sans-serif;
   width: 100%;
   background-color: #B1D62E;
   color: white;
@@ -122,22 +113,37 @@ input[type=text], select {
   cursor: pointer;
 }
 
+#close-btn {
+  margin: 0;
+  margin-bottom: 2px;
+  padding: 4px 16px;
+  width: auto;
+  background-color: #B1D62E;
+}
+
+#close-btn:hover {
+  background-color: #85a021;
+}
+
+#save-btn {
+  background-color: #B1D62E;
+}
+
 #save-btn:hover {
   background-color: #85a021;
 }
 
-#reset-btn{
-  width: 100%;
+#reset-btn {
   background-color: #FC5A03;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 #reset-btn:hover {
   background-color: #bb4404;
 }
 
+#err{
+  font-family: 'Oswald' , sans-serif;
+  display: none;
+  color: #FC5A03;
+  text-align: center;
+}

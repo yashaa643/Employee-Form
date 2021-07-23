@@ -3,6 +3,7 @@ let spouseElement = document.querySelector('#spouse');
 let otherElement = document.querySelector('#other')
 let modal = document.getElementById("submit-modal");
 let close = document.getElementById("close-btn");
+let errElement = document.getElementById("err");
 let empDetails = {};
 
 const clickEvent = function (id, action) {
@@ -14,16 +15,12 @@ const hasWhiteSpace = function (string) {
 }
 
 const setSpouseStatus = function () {
-    if(maritalElement.value==="married"){
-        spouseElement.disabled = false;
-    }
-    else{
-        spouseElement.disabled = true;
-    }
+    spouseElement.disabled = (maritalElement.value!=="married");
 }
 
 const resetForm = function () {
     document.getElementById('emp-form').reset();
+    errElement.style.display = "none"
 }
 
 const closeModal = function () {
@@ -47,55 +44,68 @@ const displayModal = function () {
 }
 
 const validateForm = function () {
-    let fname = document.forms["emp-form"]["fname"].value;
-    let lname = document.forms["emp-form"]["lname"].value;
-    let spouse = document.forms["emp-form"]["spouse"].value;
-    let other = document.forms["emp-form"]["other"].value;
-    let tnc = document.forms["emp-form"]["tnc"].checked;
-    let gender = document.forms["emp-form"]["gender"].value;
-    let marital = document.forms["emp-form"]["marital"].value;
+
+    let errObject = {
+        isValid : false,
+        errMessage : ""
+    }
+
+    const formObject = document.forms["emp-form"];
+
+    const fname = formObject["fname"].value;
+    const lname = formObject["lname"].value;
+    const spouse = formObject["spouse"].value;
+    const other = formObject["other"].value;
+    const tnc = formObject["tnc"].checked;
+    const gender = formObject["gender"].value;
+    const marital = formObject["marital"].value;
 
     if (fname === "") {
-        alert("Please enter a First Name");
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "First Name should not be empty";
+        return errObject;
     }
 
     if (hasWhiteSpace(fname)) {
-        alert("Name should not have any white-space");
-        document.getElementById("fname").autofocus = true;
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "First Name should not have white spaces";
+        return errObject;
     }
 
     if (lname === "") {
-        alert("Please enter a Last Name");
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "Last Name should not be empty";
+        return errObject;
     }
 
     if (hasWhiteSpace(lname)) {
-        alert("Name should not have any white-space");
-        document.getElementById("lname").autofocus = true;
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "Last Name should not have white spaces";
+        return errObject;
     }
 
     if (spouse === "" && maritalElement.value === "married") {
-        alert("Please enter a Spouse name");
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "Spouse Name should not be empty";
+        return errObject;
     }
 
     if (hasWhiteSpace(spouse)) {
-        alert("Spouse Name should not have any white-space");
-        document.getElementById("fname").autofocus = true;
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "Spouse Name should not have white spaces";
+        return errObject;
     }
 
     if (other === "") {
-        alert("Please enter the Other details");
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "Other information should not be empty";
+        return errObject;
     }
 
     if (tnc === false) {
-        alert("Please accept terms and condition");
-        return false;
+        errObject["isValid"] = false;
+        errObject["errMessage"] = "Please Accept Terms & Conditions";
+        return errObject;
     }
 
     empDetails.fname = fname;
@@ -105,13 +115,23 @@ const validateForm = function () {
     empDetails.gender = gender;
     empDetails.marital = marital;
 
-    return true;
+    errObject["isValid"] = true;
+    return errObject;
+}
+
+const showError = function (errMessage){
+    errElement.innerHTML = errMessage;
+    errElement.style.display = 'block';
 }
 
 const saveEvent = function (event) {
     event.preventDefault();
-    if (validateForm()) {
+    const errObject = validateForm();
+    if(errObject.isValid===true){
         displayModal();
+    }
+    else{
+        showError(errObject["errMessage"]);
     }
 }
 

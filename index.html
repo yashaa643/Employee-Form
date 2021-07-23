@@ -5,22 +5,49 @@
     <title>Employee Input Form</title>
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/ef533d753a.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Oswald&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div id="submit-modal" class="modal">
+
         <div class="modal-content">
-            <div class="modalhead">Here's what we got from you <i id="close-btn" class="fas fa-times"></i></div>
-            <p>First Name: <span id="firstname"></span></p>
-            <p>Last Name: <span id="lastname"></span></p>
-            <p>Gender: <span id="gender"></span></p>
-            <p>Marital Status: <span id="marital"></span></p>
-            <p>Spouse Name : <span id="spousename"></span></p>
-            <p>Other : <span id="otherdetails"></span></p>
+            <div class="modalhead">
+                Here's what we got from you
+            </div>
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td id="firstname"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td id="lastname"></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td id="gender"></td>
+                </tr>
+                <tr>
+                    <td>Marital Status</td>
+                    <td id="marital"></td>
+                </tr>
+                <tr>
+                    <td>Spouse Name</td>
+                    <td id="spousename"></td>
+                </tr>
+                <tr>
+                    <td>Other Details</td>
+                    <td id="otherdetails"></td>
+                </tr>
+            </table>
+            <div class="center"> <button class="button" id="close-btn">OK</button></div>
         </div>
     </div>
 
-    <div class="center">
+    <div class="centerElement">
         <div class="head"> Employee Details Form </div>
 
         <form id="emp-form" onsubmit="saveEvent">
@@ -52,8 +79,10 @@
             <input type="checkbox" id="tnc" name="tnc" value="tnc">
             <label for="tnc"> I accept the <a href="tnc.html" target="_blank">Terms and Conditions</a></label>
 
-            <button id='save-btn'>SAVE</button>
-            <button id='reset-btn'>RESET</button>
+            <div id="err"></div>
+
+            <button class="button" id='save-btn'>SAVE</button>
+            <button class="button" id='reset-btn'>RESET</button>
     </div>
     <script src="index.js"></script>
 </body>
